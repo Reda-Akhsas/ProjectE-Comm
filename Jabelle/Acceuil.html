@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>Jabelle</title>
+<link rel="icon" type="image/x-icon" href="logopage.ico">
+<link rel="stylesheet" href="Acceuil.css">
+
+<script type = "text/javascript">
+  function displayNextImage() {
+      x = (x === images.length - 1) ? 0 : x + 1;
+      document.getElementById("img").src = images[x];
+  }
+
+  function displayPreviousImage() {
+      x = (x <= 0) ? images.length - 1 : x - 1;
+      document.getElementById("img").src = images[x];
+  }
+
+  function startTimer() {
+      setInterval(displayNextImage, 2500);
+  }
+
+  var images = [], x = -1;
+  images[0] = "accuil2.jpeg";
+  images[1] = "enseble.jpeg";
+  
+</script>
+
+
+
+
+
+
+
+
+</html>
+<body onload="startTimer()" style=background-color:#e5e5e5>
+  <img class="logo" src="logopage.png">
+    <div class="topnav">
+        
+        <a class="active" href="#home">Acceuil</a>
+        <a href="#about">About</a>
+        <a href="#shop">Shop</a>
+        <a href="#contact">Contact us</a>
+      </div>
+  
+      <conteneur><img class="imagacc" src="imageacc.png"></conteneur>
+        
+      <img id="img" src="accuil2.jpeg"/>
+      
+      
+
+
+</body>
